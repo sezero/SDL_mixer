@@ -28,6 +28,7 @@ set(SDL2MIXER_MOD_XMP_LITE          FALSE)
 
 set(SDL2MIXER_MP3                   TRUE)
 set(SDL2MIXER_MP3_MINIMP3           TRUE)
+set(SDL2MIXER_MP3_DRMP3             FALSE)
 set(SDL2MIXER_MP3_MPG123            FALSE)
 
 set(SDL2MIXER_MIDI                  FALSE)

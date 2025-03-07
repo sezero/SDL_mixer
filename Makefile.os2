@@ -35,6 +35,8 @@ USE_OPUS=yes
 USE_MPG123=yes
 # mp3 music support (using minimp3)
 USE_MINIMP3=no
+# mp3 music support (using dr_mp3)
+USE_DRMP3=no
 # wavpack music support
 USE_WAVPACK=yes
 # wavpack DSD music support
@@ -61,6 +63,7 @@ SRCS+= load_aiff.c load_voc.c music_wav.c &
        music_ogg.c music_ogg_stb.c music_opus.c &
        music_flac.c music_drflac.c music_wavpack.c &
        mp3utils.c music_mpg123.c music_minimp3.c &
+       music_drmp3.c &
        music_xmp.c music_modplug.c music_gme.c &
        music_fluidsynth.c music_timidity.c
 # timidity sources:
@@ -144,6 +147,9 @@ LIBS+= mpg123.lib
 !endif
 !ifeq USE_MINIMP3 yes
 CFLAGS+= -DMUSIC_MP3_MINIMP3
+!endif
+!ifeq USE_DRMP3 yes
+CFLAGS+= -DMUSIC_MP3_DRMP3
 !endif
 
 !ifeq USE_XMP yes
